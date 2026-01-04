@@ -39,11 +39,11 @@ import { i18n } from "./i18n";
 
 const routes = [
   { path: "/", component: Home },
-  { path: "/conversation/:id", component: Conversation },
+  { path: "/conversation/:id", component: Conversation }, //会话id
   { path: "/settings", component: Settings },
 ];
 const router = createRouter({
-  history: createMemoryHistory(),
+  history: createMemoryHistory(), //不改 URL，路由记录仅在内存中维护。桌面端适合使用
   routes,
 });
 router.beforeEach((to) => {
